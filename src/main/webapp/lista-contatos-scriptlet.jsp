@@ -8,6 +8,7 @@
 	br.com.caelum.agenda.ContatoDao,
 	java.text.SimpleDateFormat,
 	br.com.caelum.agenda.Contato" %>
+<h2 align=center> Lista de Contatos Cadastrados</h2>
 
 <table cellspacing="10">
 	<tr>
@@ -19,7 +20,7 @@
 	<%
 	ContatoDao dao = new ContatoDao();
 	List<Contato> contatos = dao.getLista();
-    SimpleDateFormat dataFormatada = new SimpleDateFormat();
+    SimpleDateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
 	for(Contato contato : contatos){
 	%>
 	<tr>
