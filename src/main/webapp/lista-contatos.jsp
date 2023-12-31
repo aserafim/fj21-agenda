@@ -16,13 +16,23 @@
 		<th class="col-4">Data de Nascimento</th>
 	</tr>
 <!-- Percorre contatos montando as linhass da tabela -->
-<c:forEach var="contato" items="${dao.lista}">
+<c:forEach var="contato" items="${dao.lista}" varStatus="status">
+ <c:if test="${status.index % 2 == 0}">
+  <tr>
+    <td class="colc-1">${contato.nome}</td>
+    <td class="colc-1">${contato.email }</td>
+    <td class="colc-1">${contato.endereco }</td>
+    <td class="colc-1">${contato.dataNascimento.time }</td>
+  </tr>
+</c:if>
+ <c:if test="${status.index % 2 != 0}">
   <tr>
     <td class="col-1">${contato.nome}</td>
     <td class="col-1">${contato.email }</td>
     <td class="col-1">${contato.endereco }</td>
     <td class="col-1">${contato.dataNascimento.time }</td>
   </tr>
+</c:if>
 </c:forEach>
 </table>
 </body>

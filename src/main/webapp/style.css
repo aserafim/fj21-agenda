@@ -14,3 +14,10 @@ table {
 .col-gap {
   column-gap: 10px;
 }
+
+.colc-1, colc-2, colc-3, colc-4 {
+  background-color: #bde9ba;
+  width: 25%;
+  height: 100px;
+  border: 1px solid black;
+} 
