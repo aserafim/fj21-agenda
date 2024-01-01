@@ -23,6 +23,7 @@
     <c:if test="${not empty contato.email}">
     <td class="colc-1"><a href="mailto:${contato.email}">${contato.email }</a></td>
     </c:if>
+    <c:if test="${empty contato.email}"><td class="colc-1">E-mail não cadastrado.</td></c:if>
     <td class="colc-1">${contato.endereco }</td>
     <td class="colc-1">${contato.dataNascimento.time }</td>
   </tr>
@@ -33,6 +34,7 @@
     <c:if test="${not empty contato.email}">
     <td class="col-1"><a href="mailto:${contato.email}">${contato.email }</a></td>
     </c:if>
+	<c:if test="${empty contato.email}"><td class="col-1">E-mail não cadastrado.</td></c:if>
     <td class="col-1">${contato.endereco }</td>
     <td class="col-1">${contato.dataNascimento.time }</td>
   </tr>
