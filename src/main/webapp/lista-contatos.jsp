@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <c:import url="cabecalho.jsp"/>
 <html>
 <head>
@@ -27,18 +28,18 @@
     </c:if>
     <c:if test="${empty contato.email}"><td class="colc-1">E-mail não cadastrado.</td></c:if>
     <td class="colc-1">${contato.endereco }</td>
-    <td class="colc-1">${contato.dataNascimento.time }</td>
+    <td class="colc-1"><fmt:formatDate value="${contato.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
   </tr>
 </c:if>
  <c:if test="${status.index % 2 != 0}">
   <tr>
-    <td class="col-1">${contato.nome}</td>
+    <td class="col-1">${contato.nome}</td>	
     <c:if test="${not empty contato.email}">
     <td class="col-1"><a href="mailto:${contato.email}">${contato.email }</a></td>
     </c:if>
 	<c:if test="${empty contato.email}"><td class="col-1">E-mail não cadastrado.</td></c:if>
     <td class="col-1">${contato.endereco }</td>
-    <td class="col-1">${contato.dataNascimento.time }</td>
+    <td class="col-1"><fmt:formatDate value="${contato.dataNascimento.time}" pattern="dd/MM/yyyy"/></td>
   </tr>
 </c:if>
 </c:forEach>
