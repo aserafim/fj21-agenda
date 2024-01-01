@@ -1,8 +1,10 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:import url="cabecalho.jsp"/>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
+<title>Lista de Contatos</title>
 </head>
 <body>
 <!--cria o dao-->
@@ -41,5 +43,6 @@
 </c:if>
 </c:forEach>
 </table>
+<c:import url="rodape.jsp"/>
 </body>
 </html>
