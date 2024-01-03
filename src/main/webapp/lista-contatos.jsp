@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<c:import url="cabecalho.jsp"/>
 <html>
+<c:import url="cabecalho.jsp"/>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>Lista de Contatos</title>
