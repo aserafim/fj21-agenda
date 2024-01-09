@@ -12,6 +12,8 @@ import br.com.caelum.mvc.logica.Logica;
 
 @WebServlet("/mvc")
 public class ControllerServlet extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 	throws ServletException, IOException{
 		String parametro = request.getParameter("logica");

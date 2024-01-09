@@ -29,6 +29,7 @@
     <c:if test="${empty contato.email}"><td class="colc-1">E-mail não cadastrado.</td></c:if>
     <td class="colc-1">${contato.endereco }</td>
     <td class="colc-1"><fmt:formatDate value="${contato.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
+    <td><a href="mvc?logica=RemoveContatoLogica&id=${contato.id}">Remover</a></td>
   </tr>
 </c:if>
  <c:if test="${status.index % 2 != 0}">
@@ -40,6 +41,7 @@
 	<c:if test="${empty contato.email}"><td class="col-1">E-mail não cadastrado.</td></c:if>
     <td class="col-1">${contato.endereco }</td>
     <td class="col-1"><fmt:formatDate value="${contato.dataNascimento.time}" pattern="dd/MM/yyyy"/></td>
+    <td><a href="mvc?logica=RemoveContatoLogica&id=${contato.id}">Remover</a></td>
   </tr>
 </c:if>
 </c:forEach>
