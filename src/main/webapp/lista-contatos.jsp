@@ -9,7 +9,6 @@
 </head>
 <body>
 <!--cria o dao-->
-<jsp:useBean id="dao" class="br.com.caelum.agenda.ContatoDao"/>
 <h2 align="center">Lista de Contatos</h2>
 <table cellspacing="10">
 	<tr>
@@ -19,7 +18,7 @@
 		<th class="colh-4">Data de Nascimento</th>
 	</tr>
 <!-- Percorre contatos montando as linhass da tabela -->
-<c:forEach var="contato" items="${dao.lista}" varStatus="status">
+<c:forEach var="contato" items="${contatos}" varStatus="status">
  <c:if test="${status.index % 2 == 0}">
   <tr>
     <td class="colc-1">${contato.nome}</td>
