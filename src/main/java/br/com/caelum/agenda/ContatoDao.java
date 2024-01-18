@@ -61,7 +61,7 @@ public class ContatoDao {
         }
     }
 
-    public Contato consultaId(int id) {
+    public Contato consultaId(Long id) {
         try {
             Contato contato = new Contato();
             PreparedStatement stmt = this.connection.prepareStatement("select * from contato where id = " + id);

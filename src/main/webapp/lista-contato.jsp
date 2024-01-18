@@ -5,12 +5,12 @@
 <c:import url="cabecalho.jsp"/>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
-<title>Lista de Contatos</title>
+<title>Alterar Contato</title>
 </head>
 <body>
 <!--cria o dao-->
-<h2 align="center">Lista de Contatos</h2>
-<table cellspacing="10">
+<h2 align="center">Alterar Contato</h2>
+<table>
 	<tr>
 		<th class="colh-1">Nome</th>
 		<th class="colh-2">E-mail</th>
@@ -18,8 +18,6 @@
 		<th class="colh-4">Data de Nascimento</th>
 	</tr>
 <!-- Percorre contatos montando as linhass da tabela -->
-<c:forEach var="contato" items="${contatos}" varStatus="status">
- <c:if test="${status.index % 2 == 0}">
   <tr>
     <td class="colc-1">${contato.nome}</td>
     <c:if test="${not empty contato.email}">
@@ -29,24 +27,16 @@
     <td class="colc-1">${contato.endereco }</td>
     <td class="colc-1"><fmt:formatDate value="${contato.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
     <td><a href="mvc?logica=RemoveContatoLogica&id=${contato.id}">Remover</a></td>
-    <td><a href="mvc?logica=BuscaContatoIdLogica&id=${contato.id}">Alterar Contato</a></td>
+    <td><a href="mvc?logica=AlterarContato&id=${contato.id}">Alterar</a></td>
   </tr>
-</c:if>
- <c:if test="${status.index % 2 != 0}">
-  <tr>
-    <td class="col-1">${contato.nome}</td>	
-    <c:if test="${not empty contato.email}">
-    <td class="col-1"><a href="mailto:${contato.email}">${contato.email }</a></td>
-    </c:if>
-	<c:if test="${empty contato.email}"><td class="col-1">E-mail não cadastrado.</td></c:if>
-    <td class="col-1">${contato.endereco }</td>
-    <td class="col-1"><fmt:formatDate value="${contato.dataNascimento.time}" pattern="dd/MM/yyyy"/></td>
-    <td><a href="mvc?logica=RemoveContatoLogica&id=${contato.id}">Remover</a></td>
-    <td><a href="mvc?logica=BuscaContatoIdLogica&id=${contato.id}">Alterar Contato</a></td>
-  </tr>
-</c:if>
-</c:forEach>
 </table>
+	<form action="alteraContato">
+		Nome: <input type="text" name="nome" /><br /> 
+		E-mail: <input type="text" name="email" /><br /> 
+		Endereço: <input type="text" name="endereco" /><br /> 
+		Data Nascimento: <data:campoData id="dataNascimento" /><br /> 
+		<input type="submit" value="Alterar" />
+	</form>
 <c:import url="rodape.jsp"/>
 </body>
 </html>
