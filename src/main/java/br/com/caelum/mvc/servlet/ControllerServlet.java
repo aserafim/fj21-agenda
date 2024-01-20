@@ -22,6 +22,7 @@ public class ControllerServlet extends HttpServlet{
 		try {
 			Class classe = Class.forName(nomeDaClasse);
 			
+			@SuppressWarnings("deprecation")
 			Logica logica = (Logica) classe.newInstance();
 			String pagina = logica.executa(request, response);
 			request.getRequestDispatcher(pagina).forward(request, response);

@@ -8,12 +8,12 @@
 <title>Alterar Contato</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <body>
-	<form action="adicionaContato">
+	<form action="alteraContato">
 		Nome: <input type="text" name="nome" /><br /> 
 		E-mail: <input type="text" name="email" /><br /> 
 		Endereço: <input type="text" name="endereco" /><br /> 
 		Data Nascimento: <data:campoData id="dataNascimento" /><br /> 
-		<input type="submit" value="Gravar" />
+		<input type="submit" value="Alterar" />
 	</form>
 </body>
 <c:import url="rodape.jsp" />

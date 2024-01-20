@@ -17,6 +17,7 @@ public class AlteraContatoLogica implements Logica{
 		contato.setId(id);
 		
 		ContatoDao dao = new ContatoDao();
+
 		dao.alteraContato(contato);
 					
 		return null;

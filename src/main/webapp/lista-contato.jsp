@@ -27,16 +27,9 @@
     <td class="colc-1">${contato.endereco }</td>
     <td class="colc-1"><fmt:formatDate value="${contato.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
     <td><a href="mvc?logica=RemoveContatoLogica&id=${contato.id}">Remover</a></td>
-    <td><a href="mvc?logica=AlterarContato&id=${contato.id}">Alterar</a></td>
+    <td><a href="altera-contato.jsp">Alterar</a></td>
   </tr>
 </table>
-	<form action="alteraContato">
-		Nome: <input type="text" name="nome" /><br /> 
-		E-mail: <input type="text" name="email" /><br /> 
-		Endereço: <input type="text" name="endereco" /><br /> 
-		Data Nascimento: <data:campoData id="dataNascimento" /><br /> 
-		<input type="submit" value="Alterar" />
-	</form>
 <c:import url="rodape.jsp"/>
 </body>
 </html>
