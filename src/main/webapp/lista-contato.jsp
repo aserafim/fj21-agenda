@@ -32,11 +32,11 @@
 </table>
 <br>
 	<form action="mvc?logica=AlteraContatoLogica" method="post">
-		Id: <input type="text" name="id" value="${contato.id }"/><br />
+		Id: <input type="text" name="id" value="${contato.id }" readonly="readonly" /><br />
 		Nome: <input type="text" name="nome" value="${contato.nome }"/><br /> 
 		E-mail: <input type="text" name="email" value="${contato.email }"/><br /> 
 		Endereço: <input type="text" name="endereco" value="${contato.endereco }"/><br /> 
-		Data Nascimento: <data:campoData id="dataNascimento"/><br /> 
+		Data Nascimento: <input type ="text" id="dataNascimento" value="${contato.dataNascimento }"/><br /> 
 		<input type="submit" value="Alterar" />
 	</form>
 <c:import url="rodape.jsp"/>
